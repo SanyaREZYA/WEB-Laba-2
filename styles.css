@@ -1,12 +1,18 @@
 .body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     width: 100%;
     background-color: rgb(10, 1, 27);
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: white;
     font-size: 1.5rem;
+}
+
+.top {
+    width: 100%;
 }
 
 .nav {
@@ -80,7 +86,8 @@ td {
 
 .ship-fight {
     display: flex;
-    justify-content: space-around;
+    gap: 300px;
+    flex-wrap: wrap;
 }
 
 .field {
@@ -113,6 +120,13 @@ a {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1330px) {
+    .ship-fight {
+        gap: 100px;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 481px) {
 .nav {
     height: auto;
@@ -122,6 +136,8 @@ a {
 
 .ship-fight {
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .table-div {
@@ -134,7 +150,16 @@ a {
 }
 
 .field {
-    width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+.field tr {
+    padding: 10px;
+}
+
+.field td {
+    padding: 10px;
 }
 
 .table tr {
